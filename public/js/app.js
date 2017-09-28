@@ -11221,7 +11221,8 @@ window.Pusher = __webpack_require__(38);
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
     broadcaster: 'pusher',
-    key: '227d470be9e40a4e43e5'
+    key: '7a750f149c96186c24fd',
+    cluster: 'eu'
 });
 
 Pusher.log = function (message) {
