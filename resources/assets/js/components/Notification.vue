@@ -16,7 +16,13 @@ export default {
     listen () {
       Echo.private('App.User.' + this.id )
           .notification( (noty) => {
-            alert('new notification')
+            iziToast.show({
+                          title: noty.name,
+                          position: 'bottomLeft',
+                          color: 'green',
+                          theme: 'light',
+                          message: noty.message
+                        })
             console.log(noty)
           })
     }
