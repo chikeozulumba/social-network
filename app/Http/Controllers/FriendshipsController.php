@@ -47,4 +47,10 @@ class FriendshipsController extends Controller
 
         return $resp;
     }
+
+    public function notifications ()
+    {
+        Auth::user()->UnreadNotifications->markAsRead() ;
+        return view('profile.noty')->with('nots', Auth::user()->notifications);
+    }
 }

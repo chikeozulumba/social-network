@@ -16,11 +16,11 @@ window.Vue = require('vue')
  */
 
 Vue.component('friend', require('./components/Friend.vue'))
-
 Vue.component('notification', require('./components/Notification.vue'))
+Vue.component('unread', require('./components/UnreadNotifications.vue'))
 
 import { store } from './store/store'
 const app = new Vue({
     el: '#app',
-    store
+    store 
 });

@@ -41,3 +41,12 @@ Route::get('/accept_friend/{id}', [
     'uses' => 'FriendshipsController@accept_friend',
     'as' => 'friend.add_friend'
 ]);
+
+Route::get('/get_unread', function () {
+    return Auth::user()->unreadNotifications;
+});
+
+Route::get('/notifications', [
+    'uses' => 'FriendshipsController@notifications',
+    'as' => 'notifications'
+]);

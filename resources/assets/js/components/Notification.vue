@@ -19,10 +19,11 @@ export default {
             iziToast.show({
                           title: noty.name,
                           position: 'bottomLeft',
-                          color: 'green',
+                          color: 'yellow',
                           theme: 'light',
                           message: noty.message
                         })
+            this.$store.commit('add_nots', noty)
             console.log(noty)
           })
     }
