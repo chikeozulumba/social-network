@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Traits\Friendable;
+use Storage;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -37,5 +38,10 @@ class User extends Authenticatable
     public function posts ()
     {
         return $this->hasMany('App\Post');
+    }
+
+    public function  getAvatarAttribute ($avatar)
+    {
+        return asset(Storage::url($avatar));
     }
 }

@@ -50,3 +50,13 @@ Route::get('/notifications', [
     'uses' => 'FriendshipsController@notifications',
     'as' => 'notifications'
 ]);
+
+Route::get('/feed', [
+    'uses' => 'FeedsController@feed',
+    'as' => 'feed'
+]);
+
+Route::post('/create/post', [
+    'uses' => 'PostsController@store',
+    'as' => 'create_post'
+]);

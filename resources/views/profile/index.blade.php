@@ -12,7 +12,7 @@
 
         <div class="panel-body">
           <center>
-              <img src="{{ Storage::url($user->avatar) }}" width="100px" height="100px" style="border-radius:50%;" alt="">
+              <img src="{{ $user->avatar}}" width="100px" height="100px" style="border-radius:50%;" alt="">
           </center>
           <p class="text-center" style="margin-top:10px;">
             {{ $user->profile->location }}
