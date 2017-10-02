@@ -18,6 +18,8 @@ window.Vue = require('vue')
 Vue.component('friend', require('./components/Friend.vue'))
 Vue.component('notification', require('./components/Notification.vue'))
 Vue.component('unread', require('./components/UnreadNotifications.vue'))
+Vue.component('post', require('./components/Post.vue'))
+Vue.component('feed', require('./components/Feed.vue'))
 
 import { store } from './store/store'
 const app = new Vue({
