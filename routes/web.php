@@ -60,3 +60,16 @@ Route::post('/create/post', [
     'uses' => 'PostsController@store',
     'as' => 'create_post'
 ]);
+
+Route::get('/get_auth_user_data', function() {
+    return Auth::user();
+});
+
+Route::get('/like/{id}', [
+    'uses' => 'LikesController@like'
+]);
+
+Route::get('/unlike/{id}', [
+    'uses' => 'LikesController@unlike'
+]);
+
